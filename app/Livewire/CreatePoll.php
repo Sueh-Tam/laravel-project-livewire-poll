@@ -52,6 +52,7 @@ class CreatePoll extends Component
         }*/
 
         $this->reset(['title','options']);
+        //in livew wire 3 do not use emit, but dispatch
         $this->dispatch('pollCreated');
         
     }
