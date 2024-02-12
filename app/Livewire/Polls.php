@@ -7,6 +7,12 @@ use Livewire\Component;
 
 class Polls extends Component 
 {
+
+    protected $listeners = [
+        'pollCreated' => 'render'
+    ];
+
+    
     public function render()
     {
         $polls = Poll::with('options.votes')->latest()->get();
