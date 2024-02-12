@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Option extends Model
 {
     use HasFactory; 
-
+    protected $fillable = ['name'];
     public function poll(): BelongsTo{
         return $this->belongsTo(Poll::class);
     }
